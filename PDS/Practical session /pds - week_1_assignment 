@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyNwqgZMcxj8HoJdHE4IvaEF",
+      "authorship_tag": "ABX9TyNEJasoFUiDwk1TJff3n/HU",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -45,12 +45,28 @@
     },
     {
       "cell_type": "code",
-      "source": [],
+      "source": [
+        "print(\"Integer literal :\", integer_literal)\n",
+        "print(\"Float literal ;\", float_literal)"
+      ],
       "metadata": {
-        "id": "VsNHFUEpdUWV"
+        "id": "VsNHFUEpdUWV",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e544aa49-8482-4ac2-dfa8-23244b819f99"
       },
-      "execution_count": null,
-      "outputs": []
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Integer literal : 100\n",
+            "Float literal ; 99.95\n"
+          ]
+        }
+      ]
     },
     {
       "cell_type": "code",
