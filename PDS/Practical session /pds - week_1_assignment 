@@ -1,0 +1,151 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNwqgZMcxj8HoJdHE4IvaEF",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shivamkumar359/3rd-SEM-CLASS-CODES/blob/main/PDS/Practical%20session%20/pds%20-%20week_1_assignment%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# LITERALS\n",
+        "# ----------------------\n",
+        "\n",
+        "integer_literal = 100\n",
+        "float_literal = 99.95\n",
+        "string_literal = \"Python\"\n",
+        "boolean_literal = True\n"
+      ],
+      "metadata": {
+        "id": "jCV8E3sVdUZc"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "VsNHFUEpdUWV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "qb-D_4vCdUTB"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "VwAijpqCdUP9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "vgFltfWZdULH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "h6DfoGAGdUJd"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "a-t_SdmkdUGg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "N7gfNNWldUAT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Te2TTaiB3LfV",
+        "outputId": "d10accee-1c89-44f4-de55-3d5fdd75fa89"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 24\n",
+            "Before conversion: <class 'str'>\n",
+            "After conversion: <class 'int'>\n",
+            "The number is even.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Check if a number is even or odd\n",
+        "\n",
+        "number = input(\"Enter a number: \")\n",
+        "\n",
+        "print(\"Before conversion:\", type(number))\n",
+        "\n",
+        "number = int(number)\n",
+        "\n",
+        "print(\"After conversion:\", type(number))\n",
+        "\n",
+        "if number % 2 == 0:\n",
+        "    result = \"even\"\n",
+        "else:\n",
+        "    result = \"odd\"\n",
+        "\n",
+        "print(\"The number is {}.\".format(result))\n"
+      ]
+    }
+  ]
+}
