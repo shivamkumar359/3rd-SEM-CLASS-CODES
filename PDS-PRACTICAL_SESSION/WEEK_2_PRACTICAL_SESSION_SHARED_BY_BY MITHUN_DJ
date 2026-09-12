@@ -1,0 +1,635 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/shivamkumar359/3rd-SEM-CLASS-CODES/blob/main/PDS-PRACTICAL_SESSION/WEEK_2_PRACTICAL_SESSION_SHARED_BY_BY%20MITHUN_DJ\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Y9-k1HRTlL2Q",
+        "outputId": "ba6ab2da-42e1-44f6-c8dc-d05f6731a022"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "PYTHON REVISION\n",
+            "========================================\n",
+            "Marks: [72, 45, 88, 33, 67]\n"
+          ]
+        }
+      ],
+      "source": [
+        "# WEEK 2 - ALGORITHM FUNDAMENTALS: SORTING\n",
+        "# 2-HOUR GOOGLE COLAB PRACTICAL\n",
+        "# Bubble Sort | Selection Sort | Insertion Sort\n",
+        "# ============================================================\n",
+        "# ============================================================\n",
+        "print(\"PYTHON REVISION\")\n",
+        "print(\"=\" * 40)\n",
+        "\n",
+        "# A simple list\n",
+        "marks = [72, 45, 88, 33, 67]\n",
+        "print(\"Marks:\", marks)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Indexing\n",
+        "print(\"First mark:\", marks[0])\n",
+        "print(\"Last mark:\", marks[-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bb6LONo1lM6B",
+        "outputId": "71456283-9d91-4c69-a301-7f1981d13b36"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "First mark: 72\n",
+            "Last mark: 67\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Length\n",
+        "print(\"Number of students:\", len(marks))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IhYpovUOlM99",
+        "outputId": "c9706e5a-2dce-4676-fe11-4de9ed716a98"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Number of students: 5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# for loop\n",
+        "print(\"\\nPrinting marks:\")\n",
+        "\n",
+        "for mark in marks:\n",
+        "    print(mark)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wwyHAqBDlNBn",
+        "outputId": "1538eb8e-6421-4075-c8df-3dcb89190c0a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Printing marks:\n",
+            "72\n",
+            "45\n",
+            "88\n",
+            "33\n",
+            "67\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in range(5):\n",
+        "    print(\"i =\", i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1iiNuEpsmi8h",
+        "outputId": "f3e7b001-8ce6-48be-e501-9a47f4691f7d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "i = 0\n",
+            "i = 1\n",
+            "i = 2\n",
+            "i = 3\n",
+            "i = 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# if condition\n",
+        "print(\"\\nChecking marks:\")\n",
+        "\n",
+        "for mark in marks:\n",
+        "    if mark > 50:\n",
+        "        print(mark, \"PASS\")\n",
+        "    else:\n",
+        "        print(mark, \"FAIL\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wqfDwGsNmjFN",
+        "outputId": "f9de6369-5936-4d1c-f7d2-b0aa1ae785bc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Checking marks:\n",
+            "72 PASS\n",
+            "45 FAIL\n",
+            "88 PASS\n",
+            "33 FAIL\n",
+            "67 PASS\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ============================================================\n",
+        "# PART 2: WHAT IS SORTING?\n",
+        "# ============================================================\n",
+        "print(\"\\n\\nWHAT IS SORTING?\")\n",
+        "print(\"=\" * 40)\n",
+        "numbers = [45, 12, 78, 33, 67, 20]\n",
+        "print(\"Before sorting:\", numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yhhZFhe9oRc2",
+        "outputId": "654d1ea2-0b5f-4c38-9d2e-8eb8b584d95b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "\n",
+            "WHAT IS SORTING?\n",
+            "========================================\n",
+            "Before sorting: [45, 12, 78, 33, 67, 20]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Python's built-in sorting\n",
+        "print(\"After sorting:\", sorted(numbers))\n",
+        "print(\"\\nAscending:\", sorted(numbers))\n",
+        "print(\"Descending:\", sorted(numbers, reverse=True))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "k2B7qaMEomD3",
+        "outputId": "a2a6bc99-a0a9-40f7-be66-c992bb9418d2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "After sorting: [12, 20, 33, 45, 67, 78]\n",
+            "\n",
+            "Ascending: [12, 20, 33, 45, 67, 78]\n",
+            "Descending: [78, 67, 45, 33, 20, 12]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# IMPORTANT:\n",
+        "# For the algorithms below, we will NOT use sorted()\n",
+        "# We will write our own sorting algorithms.\n",
+        "\n",
+        "# ============================================================\n",
+        "# PART 3: SWAPPING\n",
+        "# ============================================================\n",
+        "print(\"\\n\\nSWAPPING TWO VALUES\")\n",
+        "print(\"=\" * 40)\n",
+        "a = 10\n",
+        "b = 20\n",
+        "print(\"Before:\")\n",
+        "print(\"a =\", a)\n",
+        "print(\"b =\", b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "afZ-xuKCpR8f",
+        "outputId": "1a91ae58-06b8-4f3e-d03f-5cdde8eab378"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "\n",
+            "SWAPPING TWO VALUES\n",
+            "========================================\n",
+            "Before:\n",
+            "a = 10\n",
+            "b = 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Python makes swapping very easy\n",
+        "a, b = b, a\n",
+        "print(\"\\nAfter:\")\n",
+        "print(\"a =\", a)\n",
+        "print(\"b =\", b)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "IJapmQWJp6Hh",
+        "outputId": "0e393b8e-0d43-459b-8c12-a5db09f325ce"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "After:\n",
+            "a = 10\n",
+            "b = 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ============================================================\n",
+        "# PART 4: BUBBLE SORT - FIRST SIMPLE EXAMPLE\n",
+        "# ============================================================\n",
+        "print(\"\\n\\nBUBBLE SORT\")\n",
+        "print(\"=\" * 40)\n",
+        "numbers = [5, 3, 8, 1, 2]\n",
+        "print(\"Before:\", numbers)\n",
+        "n = len(numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vW06QCNKp6Pp",
+        "outputId": "4beddca9-8048-4757-aeeb-fa30af746f83"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "\n",
+            "BUBBLE SORT\n",
+            "========================================\n",
+            "Before: [5, 3, 8, 1, 2]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Outer loop = number of passes\n",
+        "for i in range(n):\n",
+        "\n",
+        "    # Inner loop = compare neighbouring elements\n",
+        "    for j in range(0, n - i - 1):\n",
+        "\n",
+        "        # If left number is bigger\n",
+        "        if numbers[j] > numbers[j + 1]:\n",
+        "\n",
+        "            # Swap\n",
+        "            numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]\n",
+        "\n",
+        "print(\"After:\", numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pAOS6Ta0p6Vi",
+        "outputId": "3869203f-1f35-4456-cc9c-0767047993a4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "After: [1, 2, 3, 5, 8]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ============================================================\n",
+        "# PART 5: BUBBLE SORT - SHOW EVERY PASS\n",
+        "# ============================================================\n",
+        "print(\"\\n\\nBUBBLE SORT - STEP BY STEP\")\n",
+        "print(\"=\" * 40)\n",
+        "\n",
+        "numbers = [5, 3, 8, 1, 2]\n",
+        "\n",
+        "print(\"Starting list:\", numbers)\n",
+        "\n",
+        "n = len(numbers)\n",
+        "\n",
+        "for i in range(n):\n",
+        "\n",
+        "    print(\"\\nPass\", i + 1)\n",
+        "\n",
+        "    for j in range(0, n - i - 1):\n",
+        "\n",
+        "        print(\"Compare:\", numbers[j], \"and\", numbers[j + 1])\n",
+        "\n",
+        "        if numbers[j] > numbers[j + 1]:\n",
+        "\n",
+        "            print(\"SWAP\")\n",
+        "\n",
+        "            numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]\n",
+        "\n",
+        "        else:\n",
+        "            print(\"NO SWAP\")\n",
+        "\n",
+        "        print(\"List:\", numbers)\n",
+        "\n",
+        "print(\"\\nFinal sorted list:\", numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Dv63bI4Np6Zj",
+        "outputId": "57858a73-c66b-4c4c-cf3b-8e0865b84746"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "\n",
+            "BUBBLE SORT - STEP BY STEP\n",
+            "========================================\n",
+            "Starting list: [5, 3, 8, 1, 2]\n",
+            "\n",
+            "Pass 1\n",
+            "Compare: 5 and 3\n",
+            "SWAP\n",
+            "List: [3, 5, 8, 1, 2]\n",
+            "Compare: 5 and 8\n",
+            "NO SWAP\n",
+            "List: [3, 5, 8, 1, 2]\n",
+            "Compare: 8 and 1\n",
+            "SWAP\n",
+            "List: [3, 5, 1, 8, 2]\n",
+            "Compare: 8 and 2\n",
+            "SWAP\n",
+            "List: [3, 5, 1, 2, 8]\n",
+            "\n",
+            "Pass 2\n",
+            "Compare: 3 and 5\n",
+            "NO SWAP\n",
+            "List: [3, 5, 1, 2, 8]\n",
+            "Compare: 5 and 1\n",
+            "SWAP\n",
+            "List: [3, 1, 5, 2, 8]\n",
+            "Compare: 5 and 2\n",
+            "SWAP\n",
+            "List: [3, 1, 2, 5, 8]\n",
+            "\n",
+            "Pass 3\n",
+            "Compare: 3 and 1\n",
+            "SWAP\n",
+            "List: [1, 3, 2, 5, 8]\n",
+            "Compare: 3 and 2\n",
+            "SWAP\n",
+            "List: [1, 2, 3, 5, 8]\n",
+            "\n",
+            "Pass 4\n",
+            "Compare: 1 and 2\n",
+            "NO SWAP\n",
+            "List: [1, 2, 3, 5, 8]\n",
+            "\n",
+            "Pass 5\n",
+            "\n",
+            "Final sorted list: [1, 2, 3, 5, 8]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# ============================================================\n",
+        "# PART 7: BUBBLE SORT VISUALIZATION\n",
+        "# ============================================================\n",
+        "\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "print(\"\\n\\nBUBBLE SORT VISUALIZATION\")\n",
+        "print(\"=\" * 40)\n",
+        "\n",
+        "\n",
+        "def show_bars(arr, title):\n",
+        "\n",
+        "    plt.figure(figsize=(8, 4))\n",
+        "\n",
+        "    plt.bar(range(len(arr)), arr)\n",
+        "\n",
+        "    plt.title(title)\n",
+        "    plt.xlabel(\"Index\")\n",
+        "    plt.ylabel(\"Value\")\n",
+        "\n",
+        "    plt.show()\n",
+        "    numbers = [8, 3, 6, 1, 9, 2]\n",
+        "\n",
+        "show_bars(numbers, \"Before Sorting\")\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 482
+        },
+        "id": "aL8NUTdAp6dm",
+        "outputId": "9aa47816-a412-48d0-f067-4362c120765c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "\n",
+            "BUBBLE SORT VISUALIZATION\n",
+            "========================================\n"
+          ]
+        },
+        {
+          "output_type": "display_data",
+          "data": {
+            "text/plain": [
+              "<Figure size 800x400 with 1 Axes>"
+            ],
+            "image/png": "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FbmYbtq0SampqUpKStL06dP1k5/8RGPHjtWUKVNKMx8AAAAqiCLf/NSrVy+98cYbOnPmjF599VVlZmaqd+/eatmypWbMmKGzZ8/edpiNGzfyq08AAAAVVLHvyq9WrZpGjx6tTZs26fPPP9fw4cM1d+5cNWnSRA8++GBpZAQAAEAFcFs/SdqiRQs988wzeu655xQSEqIPPvigpHIBAACggrmlnySVpM2bN+uNN97QX/7yFwUEBGjEiBEaM2ZMSWYDAABABVKsYnr69GmlpaUpLS1Nx44dU48ePTR79myNGDFC1apVK62MAAAAqACKXEyjo6O1bt061alTRyNHjtTjjz+uVq1alWY2AAAAVCBFLqaVK1fWO++8oyFDhvDl9wAAAChxRS6m7733XmnmAAAAQAV3W3flAwAAACWFYgoAAAArUEwBAABgBYopAAAArEAxBQAAgBUopgAAALACxRQAAABWoJgCAADAChRTAAAAWIFiCgAAACtQTAEAAGAFiikAAACsQDEFAACAFSimAAAAsALFFAAAAFagmAIAAMAKFFMAAABYgWIKAAAAK1BMAQAAYAWjxXTevHmKiopSjRo1VKNGDXXv3l2rVq0yGQkAAACGGC2mjRs3VnJysvbs2aPdu3erX79+Gjp0qD777DOTsQAAAGBAJZMXf+CBB/z2p0+frnnz5mn79u1q27atoVQAAAAwwWgx/XcFBQVasWKF8vPz1b179+uO8Xg88ng8vv3c3NyyigcAAIBSZryYHjhwQN27d9elS5dUvXp1paenq02bNtcdm5SUpKlTp5ZxQgB3oogpH5iOUCFlJseYjgDgDmb8rvxWrVpp37592rFjh37xi18oLi5Ohw4duu7YxMRE5eTk+LasrKwyTgsAAIDSYnzGNCgoSC1atJAkderUSbt27dKsWbM0f/78QmPdbrfcbndZRwQAAEAZMD5j+p+8Xq/fOlIAAABUDEZnTBMTExUdHa0mTZrowoULWrJkiTZu3Kg1a9aYjAUAAAADjBbT7OxsjRw5UmfOnFFoaKiioqK0Zs0aDRw40GQsAAAAGGC0mL7++usmLw8AAACLWLfGFAAAABUTxRQAAABWoJgCAADAChRTAAAAWIFiCgAAACtQTAEAAGAFiikAAACsQDEFAACAFSimAAAAsALFFAAAAFagmAIAAMAKFFMAAABYgWIKAAAA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\n"
+          },
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# PART 10: INSERTION SORT\n",
+        "# ============================================================\n",
+        "print(\"\\n\\nINSERTION SORT\")\n",
+        "print(\"=\" * 40)\n",
+        "numbers = [5, 2, 4, 6, 1, 3]\n",
+        "print(\"Before:\", numbers)\n",
+        "for i in range(1, len(numbers)):\n",
+        "    # Take current value\n",
+        "    key = numbers[i]\n",
+        "    # Compare with previous values\n",
+        "    j = i - 1\n",
+        "    while j >= 0 and numbers[j] > key:\n",
+        "        numbers[j + 1] = numbers[j]\n",
+        "        j = j - 1\n",
+        "    # Insert key into correct position\n",
+        "    numbers[j + 1] = key\n",
+        "    print(\"After inserting\", key, \":\", numbers)\n",
+        "print(\"Final:\", numbers)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rjPbJqprxwFs",
+        "outputId": "1abe4548-668f-4680-d088-eb70086262be"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "\n",
+            "INSERTION SORT\n",
+            "========================================\n",
+            "Before: [5, 2, 4, 6, 1, 3]\n",
+            "After inserting 2 : [2, 5, 4, 6, 1, 3]\n",
+            "After inserting 4 : [2, 4, 5, 6, 1, 3]\n",
+            "After inserting 6 : [2, 4, 5, 6, 1, 3]\n",
+            "After inserting 1 : [1, 2, 4, 5, 6, 3]\n",
+            "After inserting 3 : [1, 2, 3, 4, 5, 6]\n",
+            "Final: [1, 2, 3, 4, 5, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "YKyBytoLp6hC"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
